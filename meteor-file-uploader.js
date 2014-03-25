@@ -56,7 +56,7 @@ FileUploader.prototype = {
 /*****************************************************************************/
 
 /************************ Handlebars *****************************************/
-ui.registerHelper('FileUploader', function (options) {
+UI.registerHelper('FileUploader', function (options) {
   var uploadOptions = options.hash;
 
   var uploader = new FileUploader(_.extend({
@@ -68,7 +68,7 @@ ui.registerHelper('FileUploader', function (options) {
   return uploader.render(options.data || {});
 });
 
-ui.registerHelper('humanize', function (number, options) {
+UI.registerHelper('humanize', function (number, options) {
   return MeteorFile.humanize(number);
 });
 /*****************************************************************************/
